@@ -1,0 +1,36 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class EntradaDeDados {
+
+	public static void main(String[] args) {
+		///para trocar o separador de casas decimais de , pra .
+		Locale.setDefault(Locale.US);
+		///criar objeto para gravar as entradas do usuário.
+		Scanner entrada = new Scanner(System.in);
+		
+		double real, dolar, totalDolar, totalEuro;
+		double euro;
+		
+		System.out.print("informe o valor em Reais: ");
+		real = entrada.nextDouble();
+	
+		System.out.print("informe o valor do dolar: ");
+		dolar = entrada.nextDouble();
+		
+		System.out.print("informe o valor do Euro: ");
+		euro = entrada.nextDouble();
+		
+		totalDolar = real / dolar;
+		totalEuro = real / euro;
+		//"%.2f%n",: arredondamento		
+		System.out.printf("%.2f%n", totalDolar);
+		System.out.printf("%.4f%n", totalEuro);
+		
+		
+		//fechar o abjeto entrada.
+		entrada.close();
+
+	}
+
+}
