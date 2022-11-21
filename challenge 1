@@ -1,5 +1,3 @@
-package arrays;
-
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -27,7 +25,9 @@ public class challenge {
 			
 		}
 		
-		System.out.println(media / quantnotas);
+		System.out.printf("a media do aluno é %.1f%n", media / quantnotas);
+		
+		entrada.close();
 	}
 
 }
