@@ -1,0 +1,43 @@
+package arrays;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class produtoLog {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("quantos produtos voê deseja armazenar: ");
+		int produto = entrada.nextInt();
+		
+		double estoque[][] = new double [produto][2];
+		
+		double total = 0.00;
+		double listaprodutos;
+		for (int id = 0; id < estoque.length; id++) {
+			
+			System.out.printf("Informe o código do %d produto: ", id + 1);
+			estoque[id][0]= entrada.nextDouble();
+			
+			System.out.printf("Informe o valor do %d Produto: ", id + 1);
+			estoque[id][1] = entrada.nextDouble();
+			total += estoque[id][1];
+			
+			listaprodutos = estoque[id][0];
+		}
+		
+	
+		System.out.println("\n Quantidade de produtos foi adicionada no estoque: "+ produto);
+		
+		System.out.println("\n Valor total do estoque R$:"+ total);
+		
+		for (int i = 0; i < estoque.length; i++) {
+			System.out.printf("Produto %d ", listaprodutos + 1);
+			System.out.println("Valor: "+ estoque[id][1]);
+		}
+		
+		entrada.close();
+	}
+}
